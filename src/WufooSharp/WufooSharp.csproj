@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D6FF742-7950-43ED-A521-A88C3DCE0B6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WufooSharp</RootNamespace>
+    <AssemblyName>WufooSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Json.NET\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\WebHook.cs" />
+    <Compile Include="Enumerators\EntryEnumerator.cs" />
+    <Compile Include="Enumerators\CommentsEnumerator.cs" />
+    <Compile Include="Service\Constants.cs" />
+    <Compile Include="Converters\ReportFieldConverter.cs" />
+    <Compile Include="Domain\FieldError.cs" />
+    <Compile Include="Converters\EntryConverter.cs" />
+    <Compile Include="Enumerators\FormEntryEnumerator.cs" />
+    <Compile Include="Enumerators\ReportEntryEnumerator.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FilterBuilder.cs" />
+    <Compile Include="Filters.cs" />
+    <Compile Include="Service\WebhookDeleteResponse.cs" />
+    <Compile Include="Service\WebhookPutResponse.cs" />
+    <Compile Include="Service\EntryCountResponse.cs" />
+    <Compile Include="Service\PostResponse.cs" />
+    <Compile Include="Converters\WufooDateTimeConverter.cs" />
+    <Compile Include="Domain\Comment.cs" />
+    <Compile Include="Domain\Choice.cs" />
+    <Compile Include="Domain\SubField.cs" />
+    <Compile Include="Domain\Entry.cs" />
+    <Compile Include="Domain\Field.cs" />
+    <Compile Include="Converters\WufooBooleanConverter.cs" />
+    <Compile Include="IWufooClient.cs" />
+    <Compile Include="IWufooDataProvider.cs" />
+    <Compile Include="Domain\Form.cs" />
+    <Compile Include="Domain\Report.cs" />
+    <Compile Include="Domain\Widget.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Service\CommentsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\CountResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\EntriesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\EntryFieldsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\FormsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\ReportsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\UsersResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\WebHookResult.cs" />
+    <Compile Include="Service\WidgetsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WufooClient.cs" />
+    <Compile Include="WufooDataProvider.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
