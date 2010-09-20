@@ -5,7 +5,7 @@ Paging handled by wrapper as needed when collection is iterated over.
 Integration and unit tests coming soon.
 
 ###Known issues
-DeleteWebhook response causes exception when parsing response - due to Wufoo outputting XML instead of JSON.
+DeleteWebhook response causes exception when parsing response - investigating with Wufoo team.
 
 
 
