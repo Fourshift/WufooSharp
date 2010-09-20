@@ -172,18 +172,18 @@ namespace WufooSharp
             return count.Count;
         }
 
-        public WebhookPutResponse PutWebHook(string formHash, WebHook webHook)
+        public string PutWebHook(string formHash, WebHook webHook)
         {
             string data = _provider.PutWebhook(formHash, webHook);
             var result = JsonConvert.DeserializeObject<WebhookPutResponse>(data);
-            return result;
+            return result.WebhookPutResult.Hash;
         }
 
-        public WebhookPutResponse DeleteWebhook(string formHash, string webhookHash)
+        public string DeleteWebhook(string formHash, string webhookHash)
         {
             string data = _provider.DeleteWebhook(formHash, webhookHash);
-            var result = JsonConvert.DeserializeObject<WebhookPutResponse>(data);
-            return result;
+            var result = JsonConvert.DeserializeObject<WebhookDeleteResponse>(data);
+            return result.WebhookDeleteResult.Hash;
         }
     }
 

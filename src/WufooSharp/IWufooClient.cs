@@ -43,6 +43,8 @@ namespace WufooSharp
         IEnumerable<Field> GetFieldsByReportId(string reportHash);
         IEnumerable<Field> GetFieldsByReportId(string reportHash, bool system);
 
-        WebhookPutResponse PutWebHook(string formHash, WebHook webHook);
+        string PutWebHook(string formHash, WebHook webHook);
+        string DeleteWebhook(string formHash, string webhookHash);
+
     }
 }
